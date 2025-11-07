@@ -42,6 +42,7 @@ Production-ready REST API for managing menu categories, sub-categories, and item
 # .env
 MONGO_URL=mongodb+srv://<user>:<password>@<cluster>/<db>?retryWrites=true&w=majority
 PORT=4000 # optional override
+ENABLE_API_LOGS=false # set to true to force verbose logging in production
 ```
 
 ## Installation & Local Run
@@ -117,6 +118,7 @@ Detailed Postman-ready payloads are available in the [API reference cheat sheet]
 - Centralized error middleware returns consistent JSON shape.
 - Inline comments in controllers explain branching logic for tax inheritance and pricing.
 - Morgan logs HTTP requests in combined format; disable by removing the middleware if necessary.
+- Toggle `ENABLE_API_LOGS=true` in the environment when you need verbose error logging in production (e.g., Vercel).
 
 ## Deployment Notes
 
