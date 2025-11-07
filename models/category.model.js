@@ -38,6 +38,4 @@ const CategorySchema = new Schema(
   }
 );
 
-CategorySchema.index({ name: 1 }, { unique: true });
-
 export const Category = mongoose.model('Category', CategorySchema);
