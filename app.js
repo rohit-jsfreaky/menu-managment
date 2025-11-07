@@ -29,6 +29,10 @@ const limiter = rateLimit({
 app.use('/api', limiter);
 app.use('/api', apiRoutes);
 
+app.get('/', (req, res) => {
+  return res.send('Hello, this is the Menu Management API.');
+});
+
 app.use(notFoundHandler);
 app.use(errorHandler);
 
